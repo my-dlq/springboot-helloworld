@@ -36,7 +36,6 @@ spec:
       labels:
         app: springboot-helloworld
     spec:
-      serviceAccountName: springboot-helloworld
       containers:
       - name: springboot-helloworld
         image: 10.71.164.28:5000/springboot-helloworld:0.0.1
