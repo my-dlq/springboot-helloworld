@@ -31,6 +31,8 @@ spec:
   selector:
     matchLabels:
       app: #APP_NAME
+  strategy:
+    type: Recreate
   template:
     metadata:
       labels:
