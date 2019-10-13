@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {APP_NAME}
+  name: #APP_NAME
   labels:
-    app: {APP_NAME}
+    app: #APP_NAME
   annotations:
-    uuid: {APP_UUID}
+    uuid: #APP_UUID
 spec:
   type: NodePort
   ports:
@@ -18,27 +18,27 @@ spec:
       port: 8081
       targetPort: 8081
   selector:
-    app: {APP_NAME}
+    app: #APP_NAME
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {APP_NAME}
+  name: #APP_NAME
   labels:
-    app: {APP_NAME}
+    app: #APP_NAME
 spec:
-  replicas: ${APP_REPLICAS}
+  replicas: #APP_REPLICAS
   selector:
     matchLabels:
-      app: {APP_NAME}
+      app: #APP_NAME
   template:
     metadata:
       labels:
-        app: {APP_NAME}
+        app: #APP_NAME
     spec:
       containers:
-      - name: {APP_NAME}
-        image: {APP_IMAGE_NAME}
+      - name: #APP_NAME
+        image: #APP_IMAGE_NAME
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
