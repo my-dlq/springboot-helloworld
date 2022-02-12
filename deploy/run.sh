@@ -13,7 +13,7 @@ function check_dead_link(){
     done
 }
 echo "Start to check dead links."
-check_dead_link()
+check_dead_link deploy
 if [ $succ -eq 0 ]; then
     echo "Found dead links, please find logs above."
     exit 1
