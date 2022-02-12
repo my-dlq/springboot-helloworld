@@ -1,8 +1,9 @@
-#!/bin/bash -il
+#!/bin/bash
 succ=1
 function check_dead_link(){
     for file in `ls $1`
     do
+        echo file
         if [ -d $1"/"$file ]; then
             echo $1"/"$file $2
         elif [ "${file: 0-5 :5}" == ".yaml" ]; then
