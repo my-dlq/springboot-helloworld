@@ -2,4 +2,4 @@
  
 This project is the mirror docker image of Helm Chart template.
 
-test7
+test8
